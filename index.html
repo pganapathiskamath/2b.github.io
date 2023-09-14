@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Text Website</title>
+    <style>
+        html{
+        background-color:yellow;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color:darkblue;
+        }
+        img{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .moving-text {
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: moveText 8s linear infinite, changeColor 4s infinite alternate;
+        }
+
+        .blinking-text {
+            font-size: 18px;
+            animation: blinkText 1s infinite;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes changeColor {
+            0% {
+                color:darkblue;
+            }
+            50% {
+                color:purple;
+            }
+            100% {
+                color:darkblue;
+            }
+        }
+
+        @keyframes blinkText {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="https://nmamit.nitte.edu.in/img/nitte-nmamit-logo.png" alt="Nitte" width="300px">
+    <div class="container">
+        <p class="moving-text">Nitte deemed to be university has been ranked 65 by NIRF in 2023</p>
+    </div>
+<img src="https://nitte.edu.in/img/slider/banner-1.jpg" alt="Nitte" width="500px">  
+    <div class="container">
+        <p class="blinking-text">Nitte Deemed to be University, located in the picturesque coastal city of Mangalore, Karnataka, stands as a shining beacon of excellence in the realm of higher education in India. Established in 2008, this prestigious institution has rapidly risen to prominence, earning a well-deserved reputation for academic excellence, research innovation, and a commitment to producing globally competitive graduates. As we delve into the story of Nitte Deemed to be University, we discover a dynamic and forward-thinking institution dedicated to nurturing the next generation of leaders and innovators.</p>
+    </div>
+</body>
+</html>
+
